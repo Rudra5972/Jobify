@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-secondary: #3B82F6;
+  --color-light-blue: #EAF2FF;
+  --color-background: #FFFFFF;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --font-sans: "Inter", "Outfit", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Utilities for Animations and Shadows */
+@layer utilities {
+  .card-hover {
+    @apply transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .soft-shadow {
+    box-shadow: 0 10px 40px -10px rgba(37, 99, 235, 0.1);
+  }
+}
