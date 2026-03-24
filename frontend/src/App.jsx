@@ -8,6 +8,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
+import ProfileCreate from "./pages/ProfileCreate";
+import ProfileEdit from "./pages/ProfileEdit";
+import Profile from './pages/Profile'
+import ProfileView from "./pages/ProfileView";
 function App() {
   const [login, setLogin] = useState(false);
   const makeLoginRequest = async () => {
@@ -70,6 +74,10 @@ function App() {
               element={<Login login={login} setLogin={setLogin} />}
             />
             <Route path="/signup" element={<Register />} />
+            <Route path="/profile/create" element={<ProfileCreate />} />
+            <Route path="/profile/update/" element={<ProfileEdit />} />
+            <Route path="/profile/view" element={<ProfileView />} />
+            <Route path="/profiles" element={<Profile />} />
           </Routes>
         </main>
         <Footer />
