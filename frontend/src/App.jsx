@@ -10,7 +10,7 @@ import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import ProfileCreate from "./pages/ProfileCreate";
 import ProfileEdit from "./pages/ProfileEdit";
-import Profile from './pages/Profile'
+import Profile from "./pages/Profile";
 import ProfileView from "./pages/ProfileView";
 function App() {
   const [login, setLogin] = useState(false);
